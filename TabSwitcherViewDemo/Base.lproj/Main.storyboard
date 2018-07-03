@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TabSwitcherViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GY3-hZ-Ber" customClass="TabSwitcherView" customModule="TabSwitcherViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFF-aw-an8">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Njd-9U-PbP"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Add" id="qYv-ay-j5o">
+                                        <connections>
+                                            <action selector="addButtonClickWithSender:" destination="vXZ-lx-hvc" id="N9o-Gc-l1Z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PLo-hV-xMA"/>
+                                    <barButtonItem title="Switch" id="iR2-mh-AaN">
+                                        <connections>
+                                            <action selector="modeButtonClickWithSender:" destination="vXZ-lx-hvc" id="aoM-b1-IfP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HFF-aw-an8" secondAttribute="bottom" id="BdY-gK-Fjk"/>
+                            <constraint firstItem="GY3-hZ-Ber" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Csz-1B-wgA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GY3-hZ-Ber" secondAttribute="bottom" id="Edp-ZV-xhN"/>
+                            <constraint firstAttribute="trailing" secondItem="HFF-aw-an8" secondAttribute="trailing" id="UUa-hf-d9Z"/>
+                            <constraint firstItem="GY3-hZ-Ber" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aGB-b2-cNa"/>
+                            <constraint firstItem="HFF-aw-an8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ySz-iT-N65"/>
+                            <constraint firstAttribute="trailing" secondItem="GY3-hZ-Ber" secondAttribute="trailing" id="zPQ-Jn-xq1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabSwitcherView" destination="GY3-hZ-Ber" id="pK7-Xp-8xW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
